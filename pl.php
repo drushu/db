@@ -20,7 +20,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "Aero";
+$dbname = "training";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -34,17 +34,20 @@ $result = $conn->query($sql);
 <tr>
 <th>USN</th>
 <th>Name</th>
-<th>Age</th>
-<th>Gender</th>
-<th>Status</th>
+<th>Branch</th>
+<th>Sem</th>
+<th>Section</th>
+<th>Address</th>
+<th></th>
 </tr></center>";
 while($row = mysqli_fetch_array($result))
 {
 echo "<tr> <td>" . $row['usn'] . "</td>";
 echo "<td>" . $row['name'] . "</td>";
-echo "<td>" . $row['age'] . "</td>";
-echo "<td>" . $row['gender'] . "</td>";
-echo "<td>" . $row['status'] . "</td>";
+echo "<td>" . $row['branch'] . "</td>";
+echo "<td>" . $row['sem'] . "</td>";
+echo "<td>" . $row['section'] . "</td>";
+echo "<td>" . $row['address'] . "</td>";
 "</tr> ";
 };
 echo "</table>";

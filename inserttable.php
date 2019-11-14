@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "Aero";
+$dbname = "placement";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -13,19 +13,18 @@ if ($conn->connect_error) {
 
 $usn = $_POST['usn'];
 $name = $_POST['name'];
-$age = $_POST['age'];
-$session = $_POST['session'];
-$date = $_POST['date'];
-$status=$_POST['status'];
-$gender = $_POST['gender'];
+$branch = $_POST['branch'];
+$sem= $_POST['sem'];
+$section = $_POST['section'];
+$address=$_POST['address'];
 
 
 
 
-$sql = "INSERT INTO student(usn,name,age,gender,status,session,date) VALUES ('$usn','$name','$age','$gender','$status','$session','$date')";
+$sql = "INSERT INTO student(usn,name,branch,sem,section,address) VALUES ('$usn','$name','$branch','$sem','$section','$address')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
+    echo "New student record created successfully";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }

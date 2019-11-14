@@ -28,23 +28,21 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
-$sql = "Select * from faculty";
+$sql = "Select * from attendance where status="absent"";
 $result = $conn->query($sql);
    echo "<table border='2' bordercolor='black' width='100%'>
 <tr>
-<th>Faculty Id</th>
-<th>Name</th>
-<th>Gender</th>
-<th>Salary</th>
-<th>Experience</th>
+<th>USN</th>
+<th>Date</th>
+<th>Session</th>
+<th>Status</th>
 </tr></center>";
 while($row = mysqli_fetch_array($result))
 {
-echo "<tr> <td>" . $row['fid'] . "</td>";
-echo "<td>" . $row['name'] . "</td>";
-echo "<td>" . $row['gender'] . "</td>";
-echo "<td>" . $row['salary'] . "</td>";
-echo "<td>" . $row['experience'] . "</td>";
+echo "<tr> <td>" . $row['USN'] . "</td>";
+echo "<td>" . $row['Date'] . "</td>";
+echo "<td>" . $row['Session'] . "</td>";
+echo "<td>" . $row['Status'] . "</td>";
 
 "</tr> ";
 };

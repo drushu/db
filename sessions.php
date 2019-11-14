@@ -2,25 +2,20 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "placement";
+$dbname = "training";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+    die("Connection failed:" . $conn->connect_error);
 }
+$session = $_POST['session'];
+$date = $_POST['date'];
+$from_time = $_POST['from_time'];
+$to_time= $_POST['to_time'];
 
-
-$fid=$_POST["fid"];
-$name=$_POST["name"];
-$gender=$_POST["gender"];
-$salary=$_POST["salary"];
-$experience=$_POST["experience"];
-
-
-
-$sql = "INSERT INTO faculty(fid,name,gender,salary,experience) VALUES('".$fid."','".$name."','".$gender."','".$salary."','".$experience"'.)";
+$sql = "INSERT INTO sessions(session,date,from_time,to_time) VALUES ('$session','$date','$from_time','$to_time')";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
@@ -29,7 +24,3 @@ if ($conn->query($sql) === TRUE) {
 }
 $conn->close();
 ?> 
-
-
-
-

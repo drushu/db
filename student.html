@@ -1,71 +1,40 @@
-
-
 <html>
-    <head>
-        <title>airline reservation form </title>
-    </head>
-    <body background="airplane.jpg">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>STUDENT DETAILS</title>
+</head>
 
-    <form name="airline" action="inserttable.php" method="post">
-  <form name="flightdet" action="flightdet.php" method="post">
-        <center>
-        <h1><marquee>Placement attendance System </marquee> </h1></center>
-     <hr>
-<h1>Attendance</h1>
-<hr>
-<br/>
-    <td><b>Status:</td><td><select name="status">
-	<option selected value=""></option>
-	<option value="Present">Present</option>
-    <option value="Absent">Absent</option>
-	</select>
-<br/>
-<br/>	
+<body background="11.jpg"></body><br><br><br>
+<center><h1>STUDENT DETAILS</h1></center>
+<fieldset><center>
+    <legend><strong> Enter information</strong></legend><br><br>
 
-<td><b>USN</td><td>
-<input type="text" name="usn" required/>
-<br /></td>
 
-<br/>
-<br>
-    Session:<td><select name="session">
-<option selected value=""></option>
-<option value="1">1</option>
-<option value="2">2</option>
-<option value="3">3</option>
-<option value="4">4</option>
-</td>
-</br>
-<br/>
-<br/>
-<td><b>Date</td><td>
-<input type="date" name="date" required/>
-<br /></td>
-<br/>
-<h1>Personal Details</h1>
-<hr>
-<h3><marquee>
-<font color="white">Make sure you will fill the details correctly!!</h3></font> </marquee>
-<table border="1" width="50%" height="25%">
- <tr>
- <th>USN</th>
-    <th>Name</th> 
-    <th>Age</th>
-    <th>Gender</th>
-  </tr>
-  <tr>
-  <td><input type="text" name="usn" required/></td>
- <td><input type="text" name="name"></td>
- <td><input type="text" name="age" size="2"></td>
- <td><select name="gender">
-<option selected value=""></option>
-<option value="Male">Male</option>
-<option value="Female">Female</option></td>
- </tr>
+    <form action="inserttable.php" method="post" />
+<table>
+<tr>
+<td><b>USN:</td><td><input type="text" name="usn" required/><br /></td>
+</tr>
+<tr>
+<td><b>Name:</td><td><input type="text" name="name" required/><br /></td>
+</tr>
+<tr>
+<td><b>Branch:</td><td><input type="text" name="branch" required/><br /></td>
+</tr>
+<tr>
+<td><b>Sem:</td><td><input type="text" name="sem" required/><br /></td>
+</tr>
+<tr>
+<td><b>Section:</td><td><input type="text" name="section" required/><br /></td>
+</tr>
+<tr>
+<td><b>Address:</td><td><input type="text" name="address" required/><br /></td>
+</tr>
+
 </table>
-  <input type="submit" value="Submit">
-</form>
-<input type="reset" value="clear">  
-</form> 
-    </body>
+<br><br><input type="submit" value="Confirm">
+    </form>
+</fieldset>
+<br />
+<center></body>
 </html>
